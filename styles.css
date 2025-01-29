@@ -1,0 +1,168 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "JetBrains Mono";
+}
+
+body {
+    background-image: url('fondo\ de\ pagina.jpg'); /* Ruta de tu imagen de fondo */
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    color: #e65c50;
+    opacity: 1;
+    animation: fadeIn 1.5s forwards;
+}
+
+/* Animación de desvanecimiento */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Cabecera */
+header {
+    padding: 20px;
+    text-align: center;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .logo h1 {
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.logo-img {
+    width: 50px; /* Ajusta el tamaño del logo */
+    height: 50px;
+    border-radius: 50%; /* Hace que la imagen sea circular */
+    object-fit: cover; /* Hace que la imagen se ajuste sin deformarse */
+}
+
+/* Estilo del menú de navegación */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff6f61;  
+}
+
+nav ul li a.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #ff6f61;
+    transform: scale(1.1);
+}
+
+/* Sección de Introducción */
+.section-intro, .section-productos, .section-contacto {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-intro:hover, .section-productos:hover, .section-contacto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Sección de Productos */
+.section-productos h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.productos-contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.producto {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.producto h3 {
+    font-size: 24px;
+    color: #ff6f61;
+}
+
+.producto p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.producto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Botones de compra */
+.btn-compra {
+    background-color: #ff6f61;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.btn-compra:hover {
+    background-color: #e65c50;
+}
+
+/* Pie de página */
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 40px;
+}
+
